@@ -1,0 +1,777 @@
+<!--
+const myself = [
+{
+name:"mif tamvan",
+ ttl:{
+ tempat: "ciamis",
+ tanggal: 21,
+ bulan: "november",
+ tahun: 2008,
+ }
+hobi: "ngoding dan belajar",
+}
+]
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizal Motor - Showroom Motor Terpercaya Cimerak Pangandaran</title>
+    <meta name="description" content="Showroom motor terpercaya di Cimerak, Pangandaran. Jual Honda Beat, Vario, Yamaha, Suzuki dengan harga murah dan kredit mudah.">
+    <meta name="keywords" content="motor, honda, yamaha, suzuki, cimerak, pangandaran, kredit motor, motor murah">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rizal Motor - Showroom Motor Cimerak Pangandaran">
+    <meta property="og:description" content="Jual motor murah Honda Beat, Vario, Yamaha, Suzuki. Kredit mudah, proses cepat.">
+    <meta property="og:image" content="images/honda-beat.jpg">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#facc15',
+                        dark: '#1f2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#beranda" class="flex items-center gap-2">
+                    <div id="logo-bg" class="w-10 h-10 bg-white rounded-xl flex items-center justify-center">
+                        <i data-lucide="bike" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <div>
+                        <h1 id="logo-text" class="font-bold text-lg leading-tight text-white">RIZAL MOTOR</h1>
+                        <p id="logo-sub" class="text-xs text-white/70">Showroom Terpercaya</p>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="#beranda" class="nav-link px-4 py-2 rounded-lg font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all">Beranda</a>
+                    <a href="#katalog" class="nav-link px-4 py-2 rounded-lg font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all">Katalog</a>
+                    <a href="#simulasi" class="nav-link px-4 py-2 rounded-lg font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all">Simulasi</a>
+                    <a href="#tentang" class="nav-link px-4 py-2 rounded-lg font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all">Tentang</a>
+                    <a href="#kontak" class="nav-link px-4 py-2 rounded-lg font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all">Kontak</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="https://wa.me/6285724247488" target="_blank" class="hidden lg:inline-flex items-center gap-2 bg-secondary hover:bg-yellow-300 text-red-900 font-bold px-5 py-2.5 rounded-lg transition-all">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Hubungi Kami
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white mt-4 mx-4 rounded-xl shadow-xl overflow-hidden">
+            <div class="p-4 space-y-2">
+                <a href="#beranda" class="mobile-link block px-4 py-3 rounded-lg font-medium text-gray-700 hover:text-primary hover:bg-red-50">Beranda</a>
+                <a href="#katalog" class="mobile-link block px-4 py-3 rounded-lg font-medium text-gray-700 hover:text-primary hover:bg-red-50">Katalog</a>
+                <a href="#simulasi" class="mobile-link block px-4 py-3 rounded-lg font-medium text-gray-700 hover:text-primary hover:bg-red-50">Simulasi Kredit</a>
+                <a href="#tentang" class="mobile-link block px-4 py-3 rounded-lg font-medium text-gray-700 hover:text-primary hover:bg-red-50">Tentang Kami</a>
+                <a href="#kontak" class="mobile-link block px-4 py-3 rounded-lg font-medium text-gray-700 hover:text-primary hover:bg-red-50">Kontak</a>
+                <a href="https://wa.me/6285724247488" target="_blank" class="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-3 rounded-lg mt-4">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Chat WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative min-h-screen flex items-center bg-gradient-to-br from-red-600 via-red-700 to-red-800 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+        
+        <!-- Decorative Circles -->
+        <div class="absolute top-20 right-20 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-white space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                        <span class="text-sm font-medium">Showroom Terpercaya</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Sistem Informasi
+                        <span class="block text-yellow-300">Penjualan Motor</span>
+                        <span class="block text-2xl md:text-3xl lg:text-4xl font-normal mt-2">Showroom Rizal Motor</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-white/90 max-w-lg">
+                        Temukan motor impian Anda dengan harga terbaik! Kami menyediakan berbagai pilihan motor murah berkualitas dengan sistem kredit yang mudah dan cepat.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#katalog" class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-yellow-300 text-red-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                            Lihat Katalog
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#kontak" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-red-700 font-bold px-8 py-4 rounded-xl transition-all">
+                            Hubungi Kami
+                        </a>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                        <a href="tel:085724247488" class="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl hover:bg-white/20 transition-all">
+                            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+                                <i data-lucide="phone" class="w-5 h-5 text-red-900"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-white/70">Telepon/WhatsApp</p>
+                                <p class="font-bold">0857-2424-7488</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-xl">
+                            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-red-900"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-white/70">Lokasi</p>
+                                <p class="font-bold">Cimerak, Pangandaran</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Featured Image -->
+                <div class="relative hidden lg:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-yellow-400/30 rounded-full blur-3xl transform scale-75"></div>
+                        <img src="images/honda-beat.jpg" alt="Honda Beat" class="relative z-10 w-full max-w-lg mx-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 rounded-2xl">
+                        <div class="absolute bottom-10 right-0 bg-white rounded-2xl shadow-2xl p-4 z-20">
+                            <p class="text-sm text-gray-500">Mulai dari</p>
+                            <p class="text-2xl font-bold text-red-600">Rp 18.500.000</p>
+                            <p class="text-xs text-green-600 font-medium">✓ Ready Stock</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Wave -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Katalog Motor Section -->
+    <section id="katalog" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-red-100 text-red-700 px-4 py-2 rounded-full mb-4">
+                    <i data-lucide="bike" class="w-5 h-5"></i>
+                    <span class="font-medium">Katalog Motor</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Pilihan Motor <span class="text-red-600">Berkualitas</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Kami menyediakan berbagai pilihan motor murah dengan kualitas terbaik. Semua motor bergaransi resmi dan siap pakai.
+                </p>
+            </div>
+            
+            <!-- Filter -->
+            <div class="flex justify-center gap-3 mb-10">
+                <button onclick="filterMotor('semua')" class="filter-btn active px-6 py-2 rounded-full font-medium transition-all bg-red-600 text-white shadow-lg" data-filter="semua">Semua</button>
+                <button onclick="filterMotor('matic')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-white text-gray-600 hover:bg-red-50 border border-gray-200" data-filter="matic">Matic</button>
+                <button onclick="filterMotor('bebek')" class="filter-btn px-6 py-2 rounded-full font-medium transition-all bg-white text-gray-600 hover:bg-red-50 border border-gray-200" data-filter="bebek">Bebek</button>
+            </div>
+            
+            <!-- Motor Grid -->
+            <div id="motor-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Motor cards will be inserted by JavaScript -->
+            </div>
+            
+            <!-- Info Banner -->
+            <div class="mt-12 bg-red-600 rounded-2xl p-6 md:p-8 text-white">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-red-900"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Garansi Resmi & Surat Lengkap</h3>
+                            <p class="text-white/80">Semua motor bergaransi resmi dan surat-surat lengkap (STNK, BPKB, Faktur)</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6285724247488" target="_blank" class="inline-flex items-center gap-2 bg-secondary hover:bg-yellow-300 text-red-900 font-bold px-8 py-4 rounded-xl transition-all">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        Konsultasi Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulasi Kredit Section -->
+    <section id="simulasi" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-4">
+                    <i data-lucide="calculator" class="w-5 h-5"></i>
+                    <span class="font-medium">Simulasi Kredit</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Hitung Cicilan <span class="text-red-600">Motor Impian</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Gunakan kalkulator kredit kami untuk mengetahui besaran cicilan motor yang Anda inginkan. Proses kredit mudah dan cepat!
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Form Simulasi -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="credit-card" class="w-5 h-5 text-red-600"></i>
+                        Form Simulasi Kredit
+                    </h3>
+                    
+                    <form id="simulasi-form" class="space-y-5">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Pilih Motor</label>
+                            <select id="motor-select" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all">
+                                <option value="">Pilih motor yang diinginkan</option>
+                            </select>
+                        </div>
+                        
+                        <div id="harga-display" class="hidden bg-red-50 p-3 rounded-lg">
+                            <p class="text-sm text-gray-600">Harga OTR</p>
+                            <p id="harga-otr" class="text-lg font-bold text-red-600">Rp 0</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Uang Muka (DP)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">Rp</span>
+                                <input type="number" id="dp-input" placeholder="Masukkan jumlah DP" class="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all">
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Minimal DP 20% dari harga motor</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Jangka Waktu (Tenor)</label>
+                            <select id="tenor-select" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all">
+                                <option value="">Pilih tenor cicilan</option>
+                                <option value="12">12 Bulan (Bunga 2%/tahun)</option>
+                                <option value="24">24 Bulan (Bunga 2.5%/tahun)</option>
+                                <option value="36">36 Bulan (Bunga 3%/tahun)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                            Hitung Cicilan
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Hasil Simulasi -->
+                <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl shadow-xl p-6 md:p-8 text-white">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                        Hasil Simulasi
+                    </h3>
+                    
+                    <div id="hasil-kosong" class="text-center py-12">
+                        <i data-lucide="calculator" class="w-20 h-20 text-white/30 mx-auto mb-4"></i>
+                        <p class="text-white/70">
+                            Silakan isi form simulasi untuk melihat hasil perhitungan cicilan motor impian Anda.
+                        </p>
+                    </div>
+                    
+                    <div id="hasil-simulasi" class="hidden space-y-6">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5">
+                            <p class="text-white/80 text-sm mb-1">Cicilan per Bulan</p>
+                            <p id="cicilan-bulanan" class="text-3xl md:text-4xl font-bold text-yellow-300">Rp 0</p>
+                            <p id="tenor-display" class="text-white/70 text-sm mt-1">x 24 bulan</p>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex justify-between py-2 border-b border-white/20">
+                                <span class="text-white/80">Harga Motor</span>
+                                <span id="harga-motor" class="font-semibold">Rp 0</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-white/20">
+                                <span class="text-white/80">Uang Muka (DP)</span>
+                                <span id="dp-hasil" class="font-semibold">Rp 0</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-white/20">
+                                <span class="text-white/80">Pokok Hutang</span>
+                                <span id="pokok-hutang" class="font-semibold">Rp 0</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-white/20">
+                                <span class="text-white/80">Total Bunga</span>
+                                <span id="total-bunga" class="font-semibold">Rp 0</span>
+                            </div>
+                            <div class="flex justify-between py-3 bg-yellow-400/20 rounded-lg px-3">
+                                <span class="font-semibold">Total Pembayaran</span>
+                                <span id="total-bayar" class="font-bold text-yellow-300">Rp 0</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/6285724247488" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl transition-all text-center flex items-center justify-center gap-2">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                            Ajukan Kredit Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Keunggulan -->
+            <div class="grid md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="check-circle" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Proses Cepat</h4>
+                    <p class="text-gray-600 text-sm">Pengajuan kredit diproses dalam 1-3 hari kerja</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="dollar-sign" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">DP Ringan</h4>
+                    <p class="text-gray-600 text-sm">DP mulai dari 20% atau bisa disesuaikan</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="calendar" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 mb-2">Tenor Fleksibel</h4>
+                    <p class="text-gray-600 text-sm">Pilihan tenor 12, 24, hingga 36 bulan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami Section -->
+    <section id="tentang" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-4">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    <span class="font-medium">Tentang Kami</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Kenapa Memilih <span class="text-red-600">Rizal Motor?</span>
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Rizal Motor adalah showroom motor terpercaya di Cimerak, Pangandaran. Kami berkomitmen menyediakan motor berkualitas dengan harga terjangkau dan pelayanan terbaik.
+                </p>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <div class="bg-white rounded-xl p-6 text-center shadow hover:shadow-lg transition-shadow">
+                    <p class="text-3xl md:text-4xl font-bold text-red-600 mb-1">10+</p>
+                    <p class="text-gray-600 text-sm">Tahun Pengalaman</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow hover:shadow-lg transition-shadow">
+                    <p class="text-3xl md:text-4xl font-bold text-red-600 mb-1">5000+</p>
+                    <p class="text-gray-600 text-sm">Pelanggan Puas</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow hover:shadow-lg transition-shadow">
+                    <p class="text-3xl md:text-4xl font-bold text-red-600 mb-1">50+</p>
+                    <p class="text-gray-600 text-sm">Motor Tersedia</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 text-center shadow hover:shadow-lg transition-shadow">
+                    <p class="text-3xl md:text-4xl font-bold text-red-600 mb-1">100%</p>
+                    <p class="text-gray-600 text-sm">Garansi Resmi</p>
+                </div>
+            </div>
+            
+            <!-- Keunggulan Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="badge-check" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Motor Bergaransi</h4>
+                            <p class="text-gray-600 text-sm">Semua motor yang kami jual bergaransi resmi dari pabrikan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Pelayanan Ramah</h4>
+                            <p class="text-gray-600 text-sm">Staff kami siap membantu dengan pelayanan terbaik</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="award" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Showroom Terpercaya</h4>
+                            <p class="text-gray-600 text-sm">Sudah melayani ribuan pelanggan sejak bertahun-tahun</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="thumbs-up" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Harga Kompetitif</h4>
+                            <p class="text-gray-600 text-sm">Harga terbaik dengan kualitas motor yang terjamin</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="clock" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Proses Cepat</h4>
+                            <p class="text-gray-600 text-sm">Pembelian cash atau kredit prosesnya cepat dan mudah</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow hover:shadow-xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="shield" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Surat Lengkap</h4>
+                            <p class="text-gray-600 text-sm">STNK, BPKB, dan faktur lengkap dan asli</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Visi Misi -->
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-red-600 rounded-xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Visi Kami</h3>
+                    <p class="text-white/90 leading-relaxed">
+                        Menjadi showroom motor terpercaya dan terdepan di wilayah Pangandaran yang menyediakan solusi transportasi terbaik dengan harga terjangkau dan pelayanan prima.
+                    </p>
+                </div>
+                <div class="bg-yellow-400 rounded-xl p-8 text-red-900">
+                    <h3 class="text-2xl font-bold mb-4">Misi Kami</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            Menyediakan motor berkualitas dengan harga kompetitif
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            Memberikan pelayanan terbaik dan profesional
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            Mempermudah proses pembelian dan kredit
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            Membangun kepercayaan dan kepuasan pelanggan
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full mb-4">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span class="font-medium">Hubungi Kami</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Informasi <span class="text-red-600">Kontak</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Hubungi kami untuk informasi lebih lanjut tentang produk dan layanan. Kami siap membantu Anda dengan senang hati.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Telepon / WhatsApp</h4>
+                                <p class="text-gray-600 mb-2">Hubungi kami kapan saja</p>
+                                <a href="tel:085724247488" class="text-lg font-semibold text-red-600 hover:text-red-700">0857-2424-7488</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Alamat Showroom</h4>
+                                <p class="text-gray-600 mb-2">Kunjungi showroom kami</p>
+                                <p class="text-gray-800">
+                                    Dusun Cidadap, Desa Cimerak,<br>
+                                    Kecamatan Cimerak, Kabupaten Pangandaran,<br>
+                                    Jawa Barat
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Jam Operasional</h4>
+                                <p class="text-gray-600 mb-2">Kami buka setiap hari</p>
+                                <div class="space-y-1 text-gray-800">
+                                    <p>Senin - Sabtu: 08.00 - 17.00 WIB</p>
+                                    <p>Minggu: 09.00 - 15.00 WIB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="https://wa.me/6285724247488" target="_blank" class="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Chat WhatsApp
+                        </a>
+                        <a href="https://maps.app.goo.gl/SvMqyLw38HMBC7vy6?g_st=aw" target="_blank" class="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition-all">
+                            <i data-lucide="navigation" class="w-5 h-5"></i>
+                            Petunjuk Arah
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <i data-lucide="send" class="w-5 h-5 text-red-600"></i>
+                        Kirim Pesan
+                    </h3>
+                    
+                    <form id="contact-form" class="space-y-5">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Nama Lengkap</label>
+                            <input type="text" id="nama" placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" placeholder="Masukkan email Anda" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Nomor Telepon</label>
+                            <input type="tel" id="telepon" placeholder="Masukkan nomor telepon" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Pesan</label>
+                            <textarea id="pesan" placeholder="Tulis pesan Anda di sini..." rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all resize-none" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            Kirim via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mt-12 max-w-6xl mx-auto">
+                <div class="bg-gray-100 rounded-2xl h-80 flex items-center justify-center relative overflow-hidden">
+                    <div class="text-center p-8">
+                        <i data-lucide="map-pin" class="w-16 h-16 text-red-600 mx-auto mb-4"></i>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Lokasi Showroom Rizal Motor</h4>
+                        <p class="text-gray-600 mb-4">Dusun Cidadap, Desa Cimerak, Kecamatan Cimerak</p>
+                        <a href="https://maps.app.goo.gl/SvMqyLw38HMBC7vy6?g_st=aw" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-xl transition-all">
+                            <i data-lucide="navigation" class="w-5 h-5"></i>
+                            Buka di Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="bike" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl">RIZAL MOTOR</h3>
+                            <p class="text-xs text-gray-400">Showroom Terpercaya</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Showroom motor terpercaya di Cimerak, Pangandaran. Menyediakan berbagai pilihan motor berkualitas dengan harga terjangkau.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Menu Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-gray-400 hover:text-white transition-colors text-sm">Beranda</a></li>
+                        <li><a href="#katalog" class="text-gray-400 hover:text-white transition-colors text-sm">Katalog Motor</a></li>
+                        <li><a href="#simulasi" class="text-gray-400 hover:text-white transition-colors text-sm">Simulasi Kredit</a></li>
+                        <li><a href="#tentang" class="text-gray-400 hover:text-white transition-colors text-sm">Tentang Kami</a></li>
+                        <li><a href="#kontak" class="text-gray-400 hover:text-white transition-colors text-sm">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Motor Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Katalog Motor</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#katalog" class="text-gray-400 hover:text-white transition-colors text-sm">Honda Beat</a></li>
+                        <li><a href="#katalog" class="text-gray-400 hover:text-white transition-colors text-sm">Honda Vario</a></li>
+                        <li><a href="#katalog" class="text-gray-400 hover:text-white transition-colors text-sm">Honda Beat Street</a></li>
+                        <li><a href="#katalog" class="text-gray-400 hover:text-white transition-colors text-sm">Yamaha Mio</a></li>
+                        <li><a href="#katalog" class="text-gray-400 hover:text-white transition-colors text-sm">Yamaha Jupiter</a></li>
+                        <li><a href="#katalog" class="text-gray-400 hover:text-white transition-colors text-sm">Suzuki Address</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"></i>
+                            <span class="text-gray-400 text-sm">
+                                Dusun Cidadap, Desa Cimerak,<br>
+                                Kecamatan Cimerak,<br>
+                                Kabupaten Pangandaran
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-red-600 flex-shrink-0"></i>
+                            <a href="tel:085724247488" class="text-gray-400 hover:text-white transition-colors text-sm">0857-2424-7488</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-red-600 flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">rizalege07@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-red-600 flex-shrink-0"></i>
+                            <span class="text-gray-400 text-sm">
+                                Senin-Sabtu: 08.00 - 17.00<br>
+                                Minggu: 09.00 - 15.00
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800">
+            <div class="container mx-auto px-4 py-6">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-gray-500 text-sm text-center md:text-left">
+                        © 2026. Mif ganteng All rights reserved.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Syarat & Ketentuan</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Kebijakan Privasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6285724247488" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-green-500/30 transition-all hover:scale-110">
+        <i data-lucide="phone" class="w-6 h-6"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
