@@ -9,7 +9,7 @@ Dibuat dengan HTML, CSS (Tailwind), dan JavaScript.
 
 ## 🌐 Live Website
 
-**URL**: https://7xaplrzajwgrs.ok.kimi.link
+**URL**: https://rizal-motor-cimerak.netlify.app
 
 ---
 
